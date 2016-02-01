@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  before_action :set_user, only: [:edit, :update, :show] 
   has_many :articles
   before_save { self.email = email.downcase }
   validates :username, presence: true, 
